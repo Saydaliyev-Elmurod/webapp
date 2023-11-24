@@ -22,7 +22,8 @@
   list-style: none;
   background-color: green;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 12px;
+  width: 60px;
 }
 .main-navigation__items li:hover {
   background-color: red;

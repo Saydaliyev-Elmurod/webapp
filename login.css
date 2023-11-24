@@ -24,7 +24,6 @@
   flex-wrap: wrap;
   /* margin: 0 auto; */
   padding: 10px;
-  background-color: red;
 }
 
 .main-navigation__items li {
@@ -33,7 +32,7 @@
   padding: 10px 20px;
   border-radius: 12px;
   width: 60px;
-  margin: 10px 0;
+  margin: 6px 0;
 }
 .main-navigation__items li:hover {
   background-color: red;

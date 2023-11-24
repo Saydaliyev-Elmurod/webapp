@@ -15,6 +15,7 @@
 .main-navigation__items {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .main-navigation__items li {

@@ -1,0 +1,8 @@
+.league img {
+  width: 25px;
+  height: 25px;
+}
+
+.league a:link {
+  text-decoration: none;
+}

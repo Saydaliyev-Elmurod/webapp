@@ -1,53 +1,32 @@
-<!DOCTYPE >
+<!DOCTYPE html>
 <html>
   <head>
-    <style>
-      div.my_class {
-        width: 33%;
-        overflow: auto;
-        float: right;
-      }
-    </style>
+    <link rel="stylesheet" href="./league.css" />
   </head>
-
   <body>
-    <nav class="main-navigation">
-      <ul class="main-navigation__items">
-        <li class="main-navigation__item active">
-          <a href="./table.html">Jadvallar</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="#">Natijalar</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="#">Keyingi tur</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="#">Statistika</a>
-        </li>
-      </ul>
-    </nav>
-    <iframe
-      frameborder="0"
-      scrolling="yes"
-      id="fs-69002"
-      src="https://www.fastscore.com/widgets/standings/27581/69002?ff=1&fs=12&lh=18&bg=FFFFFF&fc=212529&tfc=2E59A2&ifc=AFAFAF&lbc=DEE2E6&sbr=true&sci=true&sha=false&stl=true&slc=true&tlg=true&tlk=false&mp=true&mw=true&md=true&ml=true&gl=true&gd=true&f=true"
-      style="width: 100%"
-    ></iframe>
-    <div style="text-align: right; font-size: 0.9em; line-height: 1em">
-      <br /><br />
-    </div>
-    <script>
-      let iframe = document.querySelector("#fs-69002");
-      window.addEventListener(
-        "message",
-        function (e) {
-          let message = e.data;
-          iframe.style.height = message.height + "px";
-          iframe.style.width = message.width + "px";
-        },
-        false
-      );
-    </script>
+    <ol class="league">
+      <img src="./images/premier-league-8.webp" />
+      <a href="./england.html"> Premier League </a>
+    </ol>
+    <ol class="league">
+      <img src="./images/la-liga-564.webp" />
+      <a href="./spain.html"> La Liga</a>
+    </ol>
+    <ol class="league">
+      <img src="./images/serie-a-384.png" />
+      <a href="./italia.html"> Serie A </a>
+    </ol>
+    <ol class="league">
+      <img src="./images/bundesliga-82.png" />
+      <a href="./germany.html"> Bundesliga</a>
+    </ol>
+    <ol class="league">
+      <img src="./images/france.png" />
+      <a href="./france.html"> Ligue 1 </a>
+    </ol>
+    <ol class="league">
+      <img src="./images/uzbpfl.png" />
+      <a href="./uzb.html"> Uzbekistan PFL </a>
+    </ol>
   </body>
 </html>

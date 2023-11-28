@@ -5,31 +5,49 @@
   </head>
   <body>
     <nav class="main-navigation">
-      <ul class="main-navigation__items">
-        <li class="button">
-          <a href="./england.html">England</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./spain.html">Spain</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./france.html">France</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./italia.html">Italia</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./germany.html">Germany</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./uzb.html">Uzbekistan</a>
-        </li>
-      </ul>
+      <ol class="league">
+        <a href="./england.html"
+          ><img src="./images/premier-league-8.webp" />
+        </a>
+      </ol>
+      <ol class="league">
+        <a href="./spain.html"> <img src="./images/la-liga-564.webp" /></a>
+      </ol>
+      <ol class="league">
+        <a href="./italia.html"><img src="./images/serie-a-384.png" /> </a>
+      </ol>
+      <ol class="league">
+        <a href="./germany.html"><img src="./images/bundesliga-82.png" /></a>
+      </ol>
+      <ol class="league">
+        <a href="./france.html"><img src="./images/france.png" /> </a>
+      </ol>
+      <ol class="league">
+        <a href="./uzb.html"> <img src="./images/uzbpfl.png" /></a>
+      </ol>
+    </nav>
+
+    <nav class="sub-navigation">
+      <ol>
+        <a href="#table">Table</a>
+      </ol>
+      <ol>
+        <a href="#scoreaxis-widget-557ea">Top Player</a>
+      </ol>
+      <ol>
+        <a href="#finished">Finished</a>
+      </ol>
+      <ol>
+        <a href="#live">Live</a>
+      </ol>
+      <ol>
+        <a href="#schedule">Schedule</a>
+      </ol>
     </nav>
 
     <!--Spain-->
     <iframe
-      id="spain"
+      id="table"
       frameborder="0"
       scrolling="yes"
       id="fs-69144"
@@ -57,7 +75,7 @@
     -->
 
     <div
-      id="scoreaxis-widget-dd03a"
+      id="scoreaxis-widget-557ea"
       style="
         border-width: 1px;
         border-color: rgba(0, 0, 0, 0.15);
@@ -65,22 +83,22 @@
         border-radius: 8px;
         padding: 10px;
         background: rgb(255, 255, 255);
-        width: 90%;
+        width: 100%;
       "
     >
       <iframe
         id="Iframe"
-        src="https://www.scoreaxis.com/widget/league-top-players/564?autoHeight=1&amp;playersNumber=10&amp;font=0&amp;inst=dd03a"
-        style="width: 90%; border: none; transition: all 300ms ease"
+        src="https://www.scoreaxis.com/widget/league-top-players/564?autoHeight=1&amp;playersNumber=10&amp;inst=557ea"
+        style="width: 100%; border: none; transition: all 300ms ease"
       ></iframe>
       <script>
         window.addEventListener("DOMContentLoaded", (event) => {
           window.addEventListener(
             "message",
             (event) => {
-              if (event.data.appHeight && "dd03a" == event.data.inst) {
+              if (event.data.appHeight && "557ea" == event.data.inst) {
                 let container = document.querySelector(
-                  "#scoreaxis-widget-dd03a iframe"
+                  "#scoreaxis-widget-557ea iframe"
                 );
                 container &&
                   (container.style.height =
@@ -94,42 +112,45 @@
     </div>
     <div
       style="font-size: 12px; font-family: Arial, sans-serif; text-align: left"
-    ></div>
+    >
+      League data by
+      <a target="_blank" href="https://www.scoreaxis.com/">Scoreaxis</a>
+    </div>
 
-    <div id="DOM_element_id_in_your_website_1701025702292"></div>
+    <!--live-->
+    <div id="live">
+      <script
+        charset="utf8"
+        src="https://azscore.com/football/widget/en/spain/laliga/games?type=live&radius=6px&fsLeagues=14px&fwCategory=bold&fwTeam=bold&fwLeagues=bold&fwStatus=bold"
+        type="text/javascript"
+      ></script>
+      <a id="link" href="https://azscore.com/football/leagues/spain/laliga"
+        >LaLiga results today</a
+      >
+    </div>
 
-    <script>
-      (function (b, s, p, o, r, t) {
-        b["broadage"] = b["broadage"] || [];
-        if (!b["broadage"].length) {
-          r = document.createElement(s);
-          t = document.getElementsByTagName(s)[0];
-          r.async = true;
-          r.src = p;
-          t.parentNode.insertBefore(r, t);
-        }
-        b["broadage"].push({
-          bundleId: o.bundleId,
-          widgets: o.widgets,
-          accountId: o.accountId,
-        });
-      })(window, "script", "//cdn-saas.broadage.com/widgets/loader/loader.js", {
-        bundleId: ["all-ls"],
-        accountId: "8dfb6e4b-74f2-426b-9513-9c73f6ffac06",
-        widgets: {
-          liveScore: [
-            {
-              element: "DOM_element_id_in_your_website_1701025702292",
-              coverageId: "6bf0cf44-e13a-44e1-8008-ff17ba6c2128",
-              options: {
-                halfTime: false,
-                sportFilter: false,
-                sportId: 1,
-              },
-            },
-          ],
-        },
-      });
-    </script>
+    <!--finished-->
+    <div id="finished">
+      <script
+        charset="utf8"
+        src="https://azscore.com/football/widget/en/spain/laliga/games?type=results&radius=6px&fsLeagues=14px&fwCategory=bold&fwTeam=bold&fwLeagues=bold&fwStatus=bold"
+        type="text/javascript"
+      ></script>
+      <a id="link" href="https://azscore.com/football/leagues/spain/laliga"
+        >LaLiga result</a
+      >
+    </div>
+
+    <!--schedule-->
+    <div id="schedule">
+      <script
+        charset="utf8"
+        src="https://azscore.com/football/widget/en/spain/laliga/games?type=fixtures&radius=6px&fsLeagues=14px&fwCategory=bold&fwTeam=bold&fwLeagues=bold&fwStatus=bold"
+        type="text/javascript"
+      ></script>
+      <a id="link" href="https://azscore.com/football/leagues/spain/laliga"
+        >LaLiga results</a
+      >
+    </div>
   </body>
 </html>

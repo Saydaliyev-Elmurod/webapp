@@ -5,26 +5,43 @@
   </head>
   <body>
     <nav class="main-navigation">
-      <ul class="main-navigation__items">
-        <li class="button">
-          <a href="./england.html">England</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./spain.html">Spain</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./france.html">France</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./italia.html">Italia</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./germany.html">Germany</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./uzb.html">Uzbekistan</a>
-        </li>
-      </ul>
+      <ol>
+        <a href="./england.html"
+          ><img src="./images/premier-league-8.webp" />
+        </a>
+      </ol>
+      <ol>
+        <a href="./spain.html"> <img src="./images/la-liga-564.webp" /></a>
+      </ol>
+      <ol>
+        <a href="./italia.html"><img src="./images/serie-a-384.png" /> </a>
+      </ol>
+      <ol>
+        <a href="./germany.html"><img src="./images/bundesliga-82.png" /></a>
+      </ol>
+      <ol>
+        <a href="./france.html"><img src="./images/france.png" /> </a>
+      </ol>
+      <ol>
+        <a href="./uzb.html"> <img src="./images/uzbpfl.png" /></a>
+      </ol>
+    </nav>
+    <nav class="sub-navigation">
+      <ol>
+        <a href="#england">Table</a>
+      </ol>
+      <ol>
+        <a href="#scoreaxis-widget-01709">Top Player</a>
+      </ol>
+      <ol>
+        <a href="#finished">Finished</a>
+      </ol>
+      <ol>
+        <a href="#live">Live</a>
+      </ol>
+      <ol>
+        <a href="#schedule">Schedule</a>
+      </ol>
     </nav>
     <!--England-->
     <iframe
@@ -49,9 +66,9 @@
         false
       );
     </script>
-
+    <!--Top player-->
     <div
-      id="scoreaxis-widget-cb197"
+      id="scoreaxis-widget-01709"
       style="
         border-width: 1px;
         border-color: rgba(0, 0, 0, 0.15);
@@ -64,7 +81,7 @@
     >
       <iframe
         id="Iframe"
-        src="https://www.scoreaxis.com/widget/league-top-players/8?autoHeight=1&amp;playersNumber=10&amp;font=0&amp;inst=cb197"
+        src="https://www.scoreaxis.com/widget/league-top-players/8?autoHeight=1&amp;playersNumber=10&amp;inst=01709"
         style="width: 100%; border: none; transition: all 300ms ease"
       ></iframe>
       <script>
@@ -72,9 +89,9 @@
           window.addEventListener(
             "message",
             (event) => {
-              if (event.data.appHeight && "cb197" == event.data.inst) {
+              if (event.data.appHeight && "01709" == event.data.inst) {
                 let container = document.querySelector(
-                  "#scoreaxis-widget-cb197 iframe"
+                  "#scoreaxis-widget-01709 iframe"
                 );
                 container &&
                   (container.style.height =
@@ -88,6 +105,51 @@
     </div>
     <div
       style="font-size: 12px; font-family: Arial, sans-serif; text-align: left"
-    ></div>
+    >
+      League data by
+      <a target="_blank" href="https://www.scoreaxis.com/">Scoreaxis</a>
+    </div>
+
+    <!--Finished-->
+    <div id="finished">
+      <script
+        charset="utf8"
+        src="https://azscore.com/football/widget/en/england/premier-league/games?type=results&radius=6px&fsLeagues=14px&fwCategory=bold&fwTeam=bold&fwLeagues=bold&fwStatus=bold"
+        type="text/javascript"
+      ></script>
+      <a
+        id="link"
+        href="https://azscore.com/football/leagues/england/premier-league"
+        >Premier League live</a
+      >
+    </div>
+
+    <!--Live-->
+    <div id="live">
+      <script
+        charset="utf8"
+        src="https://azscore.com/football/widget/en/england/premier-league/games?type=live&radius=6px&fsLeagues=14px&fwCategory=bold&fwTeam=bold&fwLeagues=bold&fwStatus=bold"
+        type="text/javascript"
+      ></script>
+      <a
+        id="link"
+        href="https://azscore.com/football/leagues/england/premier-league"
+        >Premier League results today</a
+      >
+    </div>
+
+    <!--Schedule-->
+    <div id="schedule">
+      <script
+        charset="utf8"
+        src="https://azscore.com/football/widget/en/england/premier-league/games?type=fixtures&radius=6px&fsLeagues=14px&fwCategory=bold&fwTeam=bold&fwLeagues=bold&fwStatus=bold"
+        type="text/javascript"
+      ></script>
+      <a
+        id="link"
+        href="https://azscore.com/football/leagues/england/premier-league"
+        >Premier League result</a
+      >
+    </div>
   </body>
 </html>

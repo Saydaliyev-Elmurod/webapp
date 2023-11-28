@@ -5,28 +5,44 @@
   </head>
   <body>
     <nav class="main-navigation">
-      <ul class="main-navigation__items">
-        <li class="button">
-          <a href="./england.html">England</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./spain.html">Spain</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./france.html">France</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./italia.html">Italia</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./germany.html">Germany</a>
-        </li>
-        <li class="main-navigation__item">
-          <a href="./uzb.html">Uzbekistan</a>
-        </li>
-      </ul>
+      <ol class="league">
+        <a href="./england.html"
+          ><img src="./images/premier-league-8.webp" />
+        </a>
+      </ol>
+      <ol class="league">
+        <a href="./spain.html"> <img src="./images/la-liga-564.webp" /></a>
+      </ol>
+      <ol class="league">
+        <a href="./italia.html"><img src="./images/serie-a-384.png" /> </a>
+      </ol>
+      <ol class="league">
+        <a href="./germany.html"><img src="./images/bundesliga-82.png" /></a>
+      </ol>
+      <ol class="league">
+        <a href="./france.html"><img src="./images/france.png" /> </a>
+      </ol>
+      <ol class="league">
+        <a href="./uzb.html"> <img src="./images/uzbpfl.png" /></a>
+      </ol>
     </nav>
-
+    <nav class="sub-navigation">
+      <ol>
+        <a href="#italia">Table</a>
+      </ol>
+      <ol>
+        <a href="#scoreaxis-widget-47e26">Top Player</a>
+      </ol>
+      <ol>
+        <a href="#finished">Finished</a>
+      </ol>
+      <ol>
+        <a href="#live">Live</a>
+      </ol>
+      <ol>
+        <a href="#schedule">Schedule</a>
+      </ol>
+    </nav>
     <!--Italia-->
     <iframe
       id="italia"
@@ -57,7 +73,7 @@
     -->
 
     <div
-      id="scoreaxis-widget-41944"
+      id="scoreaxis-widget-47e26"
       style="
         border-width: 1px;
         border-color: rgba(0, 0, 0, 0.15);
@@ -70,7 +86,7 @@
     >
       <iframe
         id="Iframe"
-        src="https://www.scoreaxis.com/widget/league-top-players/384?autoHeight=1&amp;playersNumber=10&amp;font=0&amp;inst=41944"
+        src="https://www.scoreaxis.com/widget/league-top-players/384?autoHeight=1&amp;playersNumber=10&amp;inst=47e26"
         style="width: 100%; border: none; transition: all 300ms ease"
       ></iframe>
       <script>
@@ -78,9 +94,9 @@
           window.addEventListener(
             "message",
             (event) => {
-              if (event.data.appHeight && "41944" == event.data.inst) {
+              if (event.data.appHeight && "47e26" == event.data.inst) {
                 let container = document.querySelector(
-                  "#scoreaxis-widget-41944 iframe"
+                  "#scoreaxis-widget-47e26 iframe"
                 );
                 container &&
                   (container.style.height =
@@ -94,6 +110,40 @@
     </div>
     <div
       style="font-size: 12px; font-family: Arial, sans-serif; text-align: left"
-    ></div>
+    >
+      League data by
+      <a target="_blank" href="https://www.scoreaxis.com/">Scoreaxis</a>
+    </div>
+    <!--  Live-->
+    <div id="live">
+      <script
+        charset="utf8"
+        src="https://azscore.com/football/widget/en/italy/serie-a/games?type=live&radius=6px&fsLeagues=14px&fwCategory=bold&fwTeam=bold&fwLeagues=bold&fwStatus=bold"
+        type="text/javascript"
+      ></script>
+      <a id="link" href="https://azscore.com/football/leagues/italy/serie-a"
+        >Serie A scores</a
+      >
+    </div>
+    <!--  Schedule-->
+    <div id="schedule">
+      <script
+        charset="utf8"
+        src="https://azscore.com/football/widget/en/italy/serie-a/games?type=fixtures&radius=6px&fsLeagues=14px&fwCategory=bold&fwTeam=bold&fwLeagues=bold&fwStatus=bold"
+        type="text/javascript"
+      ></script>
+      <a id="link" href="https://azscore.com">{tournament} results today</a>
+    </div>
+    <!--  Finished-->
+    <div id="finished">
+      <script
+        charset="utf8"
+        src="https://azscore.com/football/widget/en/italy/serie-a/games?type=results&radius=6px&fsLeagues=14px&fwCategory=bold&fwTeam=bold&fwLeagues=bold&fwStatus=bold"
+        type="text/javascript"
+      ></script>
+      <a id="link" href="https://azscore.com/football/leagues/italy/serie-a"
+        >Serie A results today</a
+      >
+    </div>
   </body>
 </html>

@@ -18,7 +18,19 @@
   /* box-sizing: border-box; */
 }
 
-.main-navigation__items {
+.main-navigation,
+.sub-navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 10px;
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+}
+
+.sub_nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -26,22 +38,38 @@
   padding: 10px;
 }
 
-.main-navigation__items li {
+.main-navigation ol {
   list-style: none;
-  background-color: green;
   padding: 10px 20px;
-  border-radius: 12px;
-  width: 60px;
-  margin: 6px 0;
+  border-radius: 4px;
+  width: 30px;
+  margin: 2px 0;
 }
-.main-navigation__items li:hover {
+.main-navigation li:hover {
   background-color: red;
   transition: 0.2s all linear;
 }
+.main-navigation img {
+  width: 20px;
+  height: 20px;
+}
 
-.main-navigation__items li a {
+.main-navigation li a {
   text-decoration: none;
   color: white;
+}
+
+.sub-navigation ol {
+  list-style: none;
+  display: inline-block; /* Set display to inline-block */
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 5px;
+  border: 1px solid rebeccapurple; /* Combine border style and color */
+  margin: 2px 0;
+}
+
+.sub-navigation ol a {
+  text-decoration: none;
 }
 
 iframe {
